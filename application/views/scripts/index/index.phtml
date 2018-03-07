@@ -1,0 +1,53 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: samy
+ * Date: 2/17/18
+ * Time: 4:20 PM
+ */
+
+
+?>
+<!Doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="debut zend">
+    <meta name="keywords" content="zend bla bla ss">
+    <meta name="author" content="Samy mwamba">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debuter avec Zend et Mysql</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css">
+</head>
+<body>
+<nav class="navbar-fixed red"><ul><li><a href="samymwamba.com">blog samymwamba</a></li></ul></nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col l12">
+            <table class="tab">
+                <thead>
+                <tr>
+                    <td>Nom</td>
+                    <td>Age</td>
+                    <td>Email</td>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <?php foreach ($this->user as $key=>$val): ?>
+                    <tr>
+                        <td><?php echo $this->escape($val['nom']) ?></td>
+                        <td><?php echo $this->escape($val['age']) ?></td>
+                        <td><?php echo $this->escape($val['email']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
